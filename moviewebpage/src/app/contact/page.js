@@ -8,6 +8,7 @@ import Maps from "../components/Maps";
 
 const page = () => {
   const [input, setInput] = useState({})
+  const [status, setStatus] = useState(null)
 
   const handleChange = (e)=>{
     e.preventDefault();
@@ -17,6 +18,40 @@ const page = () => {
         [e.target.name] : e.target.value
       }
     )
+
+  }
+
+  const handleSubmit = async()=>{
+    try {
+      const response = await fetch('/api/contact',{
+        method: 'POST',
+        headers:{"Content_Type": "application/json"},
+        body:JSON.stringify({
+          username:value.username,
+          email:value.email,
+          phone:value.phone,
+          message:value.message
+        })
+      })
+      // set the status based on the response from the API route
+      if(response.status === 200){
+        setInput({
+          username:"",
+          email:"",
+          phone:"",
+          message:""
+        })
+        setStatus("success")
+
+      }else{
+        setStatus("error")
+      }
+      
+    } catch (error) {
+      console.log(error)
+      
+    }
+     
 
   }
   return (
@@ -33,7 +68,7 @@ const page = () => {
         <h1 className="text-3xl font-bold">We'd love to hear <sapn className="text-red-800" >form you</sapn></h1>
       </div>
       <div className="flex justify-center py-4">
-        <ContactForm onchange={handleChange} />
+        <ContactForm resStatus={status} handlesubmit={handleSubmit} onchange={handleChange} />
       </div>
       <Maps />
 
