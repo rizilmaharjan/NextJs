@@ -3,17 +3,17 @@ import Button from "./Button";
 const Header = () => {
   return (
     <>
-      <div id="header" className="image w-screen h-auto flex justify-around items-center">
-        <div className="headings ml-10 w-1/2 text-center relative">
-          <h1 className="capitalize font-bold text-6xl">felix innovations</h1>
-          <p className="font-bold text-xl mt-6 ml-[-3.3rem]">
-            present your product, app, service and more
+      <div id="header" className="px-3 sm:flex sm:justify-around sm:items-center">
+        <div className="my-10 sm:ml-10 sm:w-1/2 sm:text-center sm:relative">
+          <h1 className="font-bold text-6xl">Felix <span className="block sm:inline">Innovations</span></h1>
+          <p className="font-bold py-4 text-xl sm:mt-6 sm:ml-[-3.3rem]">
+            Present your product, app, service and more
           </p>
-          <div className="btn absolute left-36">
+          <div className="sm:absolute sm:left-36">
             <Button title="get start now" />
           </div>
         </div>
-        <Image src="/logo.png" width={700} height={100} />
+        <Image className="hidden sm:block" src="/logo.png" width={700} height={100} />
       </div>
     </>
   );
