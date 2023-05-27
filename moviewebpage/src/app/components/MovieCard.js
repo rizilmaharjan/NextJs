@@ -4,7 +4,7 @@ const MovieCard = (curElem) => {
   const {jawSummary } = curElem;
   return (
     <>
-      <div className="w-64 bg-white border drop-shadow-lg px-2 py-2 rounded-lg">
+      <div className="w-11/12 lg:w-64 bg-white border drop-shadow-lg px-2 py-2 rounded-lg">
         <div>
           <Image
           className="rounded-lg"
@@ -15,7 +15,7 @@ const MovieCard = (curElem) => {
           />
         </div>
         <div className="py-3">
-          <h2 className="text-2xl font-bold capitalize text-center">{jawSummary.title}</h2>
+          <h2 className="text-lg md:text-2xl font-bold capitalize text-center">{jawSummary.title}</h2>
         </div>
         <div>
           <p className="text-justify">{jawSummary.synopsis.substring(0,66)}...</p>
