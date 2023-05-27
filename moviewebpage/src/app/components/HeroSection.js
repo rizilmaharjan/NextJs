@@ -4,9 +4,9 @@ const HeroSection = ({ title, imageUrl }) => {
   return (
     <>
       <main>
-        <div className="grid grid-cols-2 h-[34rem] place-items-center px-28 py-28 bg-blue-300">
+        <div className="md:grid md:grid-cols-2 h-[34rem] md:place-items-center px-28 py-28 bg-blue-300">
           <div>
-            <h1 className="text-black text-5xl font-bold">{title}</h1>
+            <h1 className="text-3xl text-black md:text-5xl font-bold">{title}</h1>
             <p className="pt-5 text-justify">
               From award-winning dramas to blockbuster action movies we've got
               you covered. Browse our selection of the latest and greatest
@@ -20,7 +20,7 @@ const HeroSection = ({ title, imageUrl }) => {
               </div>
             </Link>
           </div>
-          <div>
+          <div className="hidden md:block">
             <Image
               src={imageUrl}
               alt="home_logo"
