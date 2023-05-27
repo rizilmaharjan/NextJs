@@ -13,9 +13,9 @@ const page = async () => {
   const main_data = data.titles;
   return (
     <>
-      <div className="px-32">
+      <div className="lg:px-32">
         <h1 className="text-center font-bold text-3xl py-10">Series & Movie</h1>
-        <div className="grid grid-cols-3 gap-24 py-10 place-items-center">
+        <div className="px-4 grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-24 py-10 md:place-items-center">
           {main_data.map((curElem) => {
             return <MovieCard key={curElem.id} {...curElem} />;
           })}
