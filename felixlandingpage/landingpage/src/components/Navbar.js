@@ -11,37 +11,37 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav className="flex items-center justify-between px-3 relative py-8 sm:justify-around lg:items-start lg:mt-12">
+      <nav className="flex items-center justify-between px-3 relative py-8 sm:justify-between lg:items-start lg:mt-12">
         <div className="heading">
           <h1 className="text-4xl">Felix</h1>
         </div>
-        <ul className="hidden lg:flex lg:justify-end ">
-          <li className="pr-9 text-xl">
+        <ul className="hidden md:flex lg:justify-end ">
+          <li className="pr-9 text-xl md:text-2xl">
             <Link href="#header" scroll={false}>
               Home
             </Link>
           </li>
-          <li className="pr-9 text-xl">
+          <li className="pr-9 text-xl md:text-2xl">
             <Link href="#about" scroll={false}>
               About
             </Link>
           </li>
-          <li className="pr-9 text-xl">
+          <li className="pr-9 text-xl md:text-2xl">
             <Link href="#feature" scroll={false}>
               Features
             </Link>
           </li>
-          <li className="pr-9 text-xl">
+          <li className="pr-9 text-xl md:text-2xl">
             <Link href="#price" scroll={false}>
               Prices
             </Link>
           </li>
-          <li className="pr-9 text-xl">
+          <li className="pr-9 text-xl md:text-2xl">
             <Link href="#review" scroll={false}>
               Reviews
             </Link>
           </li>
-          <li className="pr-9 text-xl">
+          <li className="pr-9 text-xl md:text-2xl">
             <Link href="#contact" scroll={false}>
               Contacts
             </Link>
@@ -50,7 +50,7 @@ const Navbar = () => {
 
         {/* for mobile devices */}
 
-        <div className="lg:hidden z-30">
+        <div className="md:hidden lg:hidden z-30">
           {nav ? (
             <RxCross1 className="text-4xl text-white" onClick={toggleNav} />
           ) : (

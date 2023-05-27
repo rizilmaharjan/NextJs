@@ -24,8 +24,8 @@ const Contact = () => {
             <p className="pt-7 text-center text-2xl text-gray-700">Lorem ipsum dolor sit amet, consectetur</p>
         </div>
         <div className="pt-14 flex justify-center">
-            <input type="text" placeholder="Email address" className=" w-2/3 sm:w-1/3 border-2 border-red-400 py-4 px-3 rounded-l-3xl"/>
-            <button className="text-[0.7rem] border-2 px-10 border-red-400 bg-red-400 text-white font-bold py-4 sm:px-12 rounded-r-3xl hover:bg-white hover:text-red-400 hover:ease-in-out hover:duration-300">SUBSCRIBE</button>
+            <input type="text" placeholder="Email address" className=" w-2/3 sm:w-1/3 border-2 border-red-400 py-4 px-3 rounded-l-3xl md:text-lg"/>
+            <button className="text-[0.7rem] border-2 px-10 border-red-400 bg-red-400 text-white font-bold py-4 sm:px-12 rounded-r-3xl hover:bg-white hover:text-red-400 hover:ease-in-out hover:duration-300 md:text-lg">SUBSCRIBE</button>
 
         </div>
 

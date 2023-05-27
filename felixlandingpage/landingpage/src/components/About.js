@@ -8,7 +8,7 @@ const About = () => {
     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quae provident enim cum quidem aut corporis";
   return (
     <>
-      <div id="about" className=" w-full h-auto pb-24">
+      <div id="about">
         <div className="px-3 sm:py-20">
           <h1 className="text-4xl capitalize font-bold text-center">meet felix</h1>
           <p className="mt-10 text-xl text-gray-700 text-center">
@@ -16,7 +16,7 @@ const About = () => {
             eiusmod <br/> tempor incididunt ut labore et dolore magna aliqua
           </p>
         </div>
-        <div className="my-44 sm:flex sm:justify-evenly">
+        <div className="my-32 sm:my-2 sm:flex sm:justify-evenly">
           <Card logo={<FiGithub />} name="functional" para={para} />
           <Card
             logo={<AiOutlineCloudDownload />}

@@ -6,12 +6,12 @@ const Pricing = () => {
   const detail3 = "enhanced security";
   return (
     <>
-      <div id="price" className="bg-gradient-to-r from-black to-gray-500 h-[100rem] sm:h-[80vh] relative">
+      <div id="price" className="bg-gradient-to-r from-black to-gray-500 h-[100rem] relative lg:h-fit">
         <img
           src="/pricing.jpg"
           className="h-full w-full object-cover mix-blend-overlay"
         />
-        <div className="absolute grid place-items-center top-0 left-0 w-full h-full sm:flex sm:justify-evenly sm:items-center">
+        <div className="absolute grid place-items-center top-0 left-0 w-full h-full lg:grid-cols-3">
           <PriceCards
             title="basic"
             plan="free"
