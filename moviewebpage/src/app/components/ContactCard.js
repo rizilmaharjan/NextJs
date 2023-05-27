@@ -2,7 +2,7 @@
 const ContactCard = ({img, para1, para2, title, value}) => {
   return (
     <>
-      <div className="drop-shadow-xl bg-white w-4/5 px-4 py-3 flex flex-col items-center justify-center ">
+      <div className="drop-shadow-xl relative z-[-1] bg-white w-4/5 px-4 py-10 md:py-3 flex flex-col items-center justify-center ">
         <div>
           <i className="text-5xl text-red-700">{img}</i>
         </div>
