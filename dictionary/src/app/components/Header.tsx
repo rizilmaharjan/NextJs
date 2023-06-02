@@ -3,7 +3,7 @@ import { BiBook } from "react-icons/bi";
 import { MdDarkMode } from "react-icons/md";
 import { CiDark } from "react-icons/ci";
 import { useState } from "react";
-import Input from "./Input";
+import Body from "./Body";
 import classNames from "classnames";
 
 const Header = () => {
@@ -29,7 +29,7 @@ const Header = () => {
             )}
           </div>
         </header>
-        <Input dark={dark} />
+        <Body dark={dark} />
       </div>
     </>
   );
