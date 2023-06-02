@@ -1,21 +1,33 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+"use client"
+import "./globals.css";
+import { Inter } from "next/font/google";
+import { QueryClient, QueryClientProvider } from "react-query";
 
-const inter = Inter({ subsets: ['latin'] })
+const queryclient = new QueryClient({
+  defaultOptions:{
+    queries:{
+      refetchOnWindowFocus: false
+    }
+  }
+});
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'Dictionary',
-  description: 'Dictionary',
-}
+  title: "Dictionary",
+  description: "Dictionary",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <QueryClientProvider client={queryclient}>
+        <body className={inter.className}>{children}</body>
+      </QueryClientProvider>
     </html>
-  )
+  );
 }
